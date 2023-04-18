@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Employees</title>
+  <style>
+    body {
+        background-color:#5CDB95 ;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #05386B;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    a{
+        color:white;
+        text-decoration: none;
+    }
+    h1 {
+        margin: 0;
+    }
+    nav {
+        padding: 10px;
+    }
+    nav ul {
+        list-style-type: none;
+        
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+    }
+     li {
+        float: left;
+        
+    }
+    
+    nav li a {
+        display: block;
+        color: #05386B;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        
+    }
+    nav li a:hover {
+        background-color: #05386B;
+        color:white;
+    }
+    
+    footer {
+        background-color: #ccc;
+        color: #333;
+        padding: 5px;
+        text-align: center;
+    }
+    .top:hover{
+    background-color: #05386B;
+    padding: 10px;
+    display: block;
+    color: White;
+    }
+    p{
+    text-align:justify-all;
+    }
+    
+
+submit:hover {
+  background-color: #0069d9;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+  <h1>Employee List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>salary</th>
+        <th>MobileNumber</th>
+        <th>Mail</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for employee in employees %}
+      <tr>
+        <td>{{ employee[0] }}</td>
+        <td>{{ employee[1] }}</td>
+        <td>{{ employee[2] }}</td>
+        <td>{{ employee[3] }}</td>
+        <td>{{ employee[4] }}</td>
+        <td>{{ employee[5] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <footer>
+    <p>&copy; Employee Database Management. All rights reserved.</p>
+</footer>
+</body>
+</html>

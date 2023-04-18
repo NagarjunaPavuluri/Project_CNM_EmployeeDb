@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Employee</title>
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+  <style>
+    body {
+        background-color:#5CDB95 ;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        text-align: center;
+        font-weight: bold;
+    }
+    header {
+        background-color: #05386B;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    a{
+        color:white;
+        text-decoration: none;
+    }
+    h1 {
+        margin: 0;
+    }
+    nav {
+        padding: 10px;
+    }
+    nav ul {
+        list-style-type: none;
+        
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+    }
+     li {
+        float: left;
+        
+    }
+    
+    nav li a {
+        display: block;
+        color: #05386B;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        
+    }
+    nav li a:hover {
+        background-color: #05386B;
+        color:white;
+    }
+    
+    footer {
+        background-color: #ccc;
+        color: #333;
+        padding: 5px;
+        text-align: center;
+    }
+    .top:hover{
+    background-color: #05386B;
+    padding: 10px;
+    display: block;
+    color: White;
+    }
+    form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 30px;
+		}
+		label {
+		font-weight: bold;
+		margin-right: 10px;
+		}
+
+		input[type="text"],
+		input[type="number"],
+		input[type="email"] {
+		padding: 10px;
+		margin-bottom: 10px;
+		border: none;
+		border-radius: 10px;
+		}
+		h3{
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+
+		button{
+		background-color: gray;
+		color: white;
+		font-weight: bold;
+		font-size: 15px;
+		padding: 10px;
+		border: none;
+        margin-bottom: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		}
+		
+        button:hover {
+			background-color: #05386B;
+			color:white;
+		}
+   
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            
+        </ul>
+    </nav>
+    <h2 >DELETE Employee</h2>
+    <h3>Here you can delete an employee from the database and you need to enter ID of the employee  </h3>
+    <h3>In order to go back click on the <span style="background-color: Blue ; color: white;">HOME</span> which is available on the top left corner of the page</h3>
+    
+  <form method="POST" action="/deleteEmployee">
+    <label for="id">Employee ID:</label>
+    <input type="number" id="employee_id" name="id" required>
+
+    <button type="submit">Delete</button>
+  </form>
+  <footer>
+    <p>&copy; Employee Database Management. All rights reserved.</p>
+</footer>
+</body>
+</html>
